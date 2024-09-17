@@ -1,34 +1,42 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Courier New', Courier, monospace;
 }
 body{
-    background-color: bisque;
+    background-color: #d1dbe4;
     margin: 20px;
 }
 .section1{
-    border-bottom: 2px dotted black;
     margin: 10px;
+    color: #476f95;
     padding: 20px;
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;
     font-size: 2em;
+    border: black solid 2px;
+}
+#count{
+    font-size: 18px;
+    font-weight: 900;
+    color: #194a7a;
+    border: blue solid 2px;
 }
 .section2{
-    border: 2px solid black;
-    padding:20px;
+    display: block;
+    padding: 10px;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
+    border: white  solid 2px;
 }
 img{
     width: 100px;
     height: 200px;
 }
 .card{
-    border: 2px solid blue;
-    width: 30%;
+    width: 40%;
     margin: 20px;
-    padding: 5px;
+    display: inline-block;
+    border: red solid 2px;
 }
 footer{
     margin-top: 10px;

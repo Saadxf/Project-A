@@ -1,5 +1,7 @@
+//api url
 const apiUrl = 'https://freetestapi.com/api/v1/books';
 
+//fetch the api
 fetch(apiUrl).then(response => {
     if (!response.ok) {
         throw new Error("Network response was not ok");
