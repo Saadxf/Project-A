@@ -1,5 +1,5 @@
 //api url
-const apiUrl = 'https://freetestapi.com/api/v1/books';
+const apiUrl = 'https://www.dbooks.org/api/recent';
 
 //fetch the api
 fetch(apiUrl).then(response => {
@@ -8,17 +8,24 @@ fetch(apiUrl).then(response => {
     }
     return response.json();
 }).then(data => {
-    console.log(data);
-    displayBooks(data);
+    console.log(data["books"]);
+    displayBooks(data["books"]);
 }).catch(error => {
     console.error('Error:', error);
 });
 
 //Funcation creat card for book
-function createCard(title, author, description, img) {
+function createCard(title, author, description, img ,url) {
     //card
     const card = document.createElement('div');
     card.classList.add('card');
+    card.classList.add('col-3');
+
+    const cardButton = document.createElement('a');
+    cardButton.classList.add('btn');
+    cardButton.classList.add('btn-primary');
+    cardButton.textContent = 'Learn more';
+    cardButton.href = url;
 
     //card-body
     const cardBody = document.createElement('div');
@@ -42,9 +49,10 @@ function createCard(title, author, description, img) {
     cardDescription.id = 'description';
     cardDescription.textContent = description;
 
+
     //image
     const cardImage = document.createElement('img');
-    cardImage.classList.add('cover_image');
+    cardImage.classList.add('card-img-top');
     cardImage.id = 'cover_image';
     cardImage.src = img;
 
@@ -53,6 +61,7 @@ function createCard(title, author, description, img) {
     cardBody.appendChild(cardTitle);
     cardBody.appendChild(cardDescription);
     cardBody.appendChild(cardAuthor);
+    cardBody.appendChild(cardButton);
 
     return card;
 }
@@ -63,7 +72,7 @@ function displayBooks(data) {
     const BookSection = document.getElementById("book-section");
     document.getElementById('count').innerHTML = `Number of books: ${data.length}`
     data.forEach(bookData => {
-        const book = createCard(bookData.title, bookData.author, bookData.description, bookData.cover_image);
+        const book = createCard(bookData.title, bookData.authors, bookData.subtitle, bookData.image, bookData.url);
         BookSection.appendChild(book);
     });
 }
