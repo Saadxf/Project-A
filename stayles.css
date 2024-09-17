@@ -24,3 +24,16 @@ img{
     width: 100px;
     height: 200px;
 }
+.card{
+    border: 2px solid blue;
+    width: 30%;
+    margin: 20px;
+    padding: 5px;
+}
+footer{
+    margin-top: 10px;
+    font-weight: 700;
+    color: gray;
+    font-size: 12px;
+    text-align: center;
+}
