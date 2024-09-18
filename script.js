@@ -15,11 +15,10 @@ fetch(apiUrl).then(response => {
 });
 
 //Funcation creat card for book
-function createCard(title, author, description, img ,url) {
+function createCard(title, author, description, img, url) {
     //card
     const card = document.createElement('div');
     card.classList.add('card');
-    card.classList.add('col-3');
 
     const cardButton = document.createElement('a');
     cardButton.classList.add('btn');
@@ -47,6 +46,10 @@ function createCard(title, author, description, img ,url) {
     const cardDescription = document.createElement('p');
     cardDescription.classList.add('card-text');
     cardDescription.id = 'description';
+    console.log(description);
+    if (description =='') {
+        cardDescription.classList.add('d-none');
+    }
     cardDescription.textContent = description;
 
 
@@ -76,3 +79,5 @@ function displayBooks(data) {
         BookSection.appendChild(book);
     });
 }
+
+

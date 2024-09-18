@@ -1,19 +1,90 @@
+/* RESET RULES & HELPER CLASSES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.overlay {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--overlay);
 }
 
 body {
-    background-color: #d1dbe4;
-    margin: 20px;
+    background: radial-gradient(rgba(255, 254, 234, 1) 0%, rgba(255, 254, 234, 1) 35%, #d1dbe4 100%);
 }
 
-.section1 {
-    margin: 10px;
-    color: #476f95;
-    padding: 20px;
+.ocean {
+    height: 5%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #015871;
+}
+
+.wave {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x;
+    position: absolute;
+    width: 100%;
+    top: -198px;
+    left: 0;
+    height: 198px;
+    transform: translate(0, 0, 0);
+}
+
+.wave:nth-of-type(2) {
+    top: -168px;
+    animation: swell 4s ease infinite;
+    opacity: 1;
+}
+
+@keyframes wave {
+    0% {
+        margin-left: 0;
+    }
+
+    100% {
+        margin-left: -1600px;
+    }
+}
+
+@keyframes swell {
+
+    0%,
+    100% {
+        transform: translate(0, -30px);
+    }
+
+    50% {
+        transform: translate(0, 5px);
+    }
+}
+
+/* FIRST SECTION
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.hero-section {
+    height: 100vh;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+
+.main-h1 {
+    color: #194a7a;
+    font-weight: 800;
+}
+
+/* SECOND SECTION
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.section2 {
+    display: block;
     text-align: center;
-    font-size: 2em;
+    align-items: center;
+    margin: 20px;
 }
 
 #count {
@@ -23,15 +94,11 @@ body {
     color: #194a7a;
 }
 
-.section2 {
-    text-align: center;
-    align-items: center;
-    margin: 20px;
-}
-
 #book-section {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
     align-items: center;
     padding: 20px;
 }
@@ -39,8 +106,32 @@ body {
 .card {
     align-items: center;
     text-align: center;
+    width: 30%;
     margin: 10px;
 }
+
+.card-body {
+    height: 200px;
+    width: 100%;
+    border: #015871 2px solid;
+}
+
+.card-title {
+    border: #015871 2px solid;
+
+}
+
+.card-text {
+    border: #015871 2px solid;
+
+}
+
+.card-img-top {
+    height: 200px;
+    border: #015871 2px solid;
+}
+
+.btn {}
 
 footer {
     margin-top: 10px;
