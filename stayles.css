@@ -104,16 +104,8 @@ body {
 }
 
 .card {
-    align-items: center;
-    text-align: center;
     width: 30%;
     margin: 10px;
-}
-
-.card-body {
-    height: 200px;
-    width: 100%;
-    border: #015871 2px solid;
 }
 
 .card-title {
@@ -126,12 +118,11 @@ body {
 
 }
 
-.card-img-top {
-    height: 200px;
+.card-img {
+    object-fit: cover;
+    height: 400px;
     border: #015871 2px solid;
 }
-
-.btn {}
 
 footer {
     margin-top: 10px;

@@ -22,13 +22,13 @@ function createCard(title, author, description, img, url) {
 
     const cardButton = document.createElement('a');
     cardButton.classList.add('btn');
-    cardButton.classList.add('btn-primary');
+    cardButton.classList.add('d-none');
     cardButton.textContent = 'Learn more';
     cardButton.href = url;
 
     //card-body
     const cardBody = document.createElement('div');
-    cardBody.classList.add('card-body');
+    cardBody.classList.add('card-img-overlay');
 
     //Title
     const cardTitle = document.createElement('h5');
@@ -55,7 +55,7 @@ function createCard(title, author, description, img, url) {
 
     //image
     const cardImage = document.createElement('img');
-    cardImage.classList.add('card-img-top');
+    cardImage.classList.add('card-img');
     cardImage.id = 'cover_image';
     cardImage.src = img;
 
