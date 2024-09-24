@@ -25,7 +25,8 @@ This application is built with responsiveness in mind. It adjusts seamlessly to 
 
 ## API and Utilities
 The project utilizes the following API:
-- **API URL**: [https://www.dbooks.org/api/recent](https://www.dbooks.org/api/recent)  
+- **API URL**: https://www.dbooks.org/api/
+  
   This API provides recent book data, which is dynamically fetched and displayed in the application.
 
 ## Acknowledgments
